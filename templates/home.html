@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block welcome %}
+ <div class="container">
+ 	<center><h1>Welcome to What Would We Say!</h1></center>
+ 	<center><a href="https://oauth.groupme.com/oauth/authorize?client_id=GruZZdWumiGwGE2oRUq5cfbH0N0V5grpkFONzlElc73gSHkO">Login to GroupMe here!</a></center>
+ </div>
+{% endblock %}
+
+{% block select_group %}
+<div class="container">
+	<center>
+		<h1>Welcome to What Would We Say!</h1>
+		<div class="groups">
+			<h2>Select a group from below</h2>
+			<script> window.onload = get_groups('{{ access_token }}'); </script>
+		</div>
+	</center>
+</div>
+{% endblock %}

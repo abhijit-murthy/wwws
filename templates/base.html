@@ -1,5 +1,21 @@
+<!DOCTYPE html>
 <html>
 	<head>
-	
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>What Would We Say?</title>
+		<link rel="stylesheet" href="/static/css/bootstrap.css" />
+		<link href="static/css/bootstrap-responsive.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="/static/js/bootstrap.js"></script>
+		<script type="text/javascript" src="/static/js/fetch.js"></script>
 	</head>
 	<body>
+	{% if state == 0 %}
+		{% block welcome %}{% endblock %}
+	{% endif %}
+	{% if state == 1 %}
+		{% block select_group %}{% endblock %}
+	{% endif %}
+	</body>
+</html>

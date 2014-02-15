@@ -9,6 +9,21 @@ class GroupMeUser(object):
 	def setGroupID(self,groupID):
 		self.groupID = groupID
 
+	def getGroups(self):
+		param = {"token" : self.token}
+		requestString = "https://api.groupme.com/v3/groups"
+		r = requests.get(requestString,params=param)
+		serverResponse = r.json()
+		serverResponse = serverResponse['response']
+		ret = []
+		for group in serverResponse:
+			groupInfo = {
+				'groupName' : group['name'],
+				'groupID'   : group['id']
+			}
+			ret.append(groupInfo)
+		return ret
+
 	def getMessages(self,before_id=None):
 		if self.groupID is None:
 			return None
