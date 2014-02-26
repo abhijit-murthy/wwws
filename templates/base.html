@@ -11,14 +11,25 @@
 		<script type="text/javascript" src="/static/js/fetch.js"></script>
 	</head>
 	<body>
-	{% if state == 0 %}
-		{% block welcome %}{% endblock %}
-	{% endif %}
-	{% if state == 1 %}
-		{% block select_group %}{% endblock %}
-	{% endif %}
-	{% if state == 2%}
-		{% block generate_message %}{% endblock %}
-	{% endif %}
+	<div id="wrap">
+		<div class="container">
+			{% if state == 0 %}
+				{% block welcome %}{% endblock %}
+			{% endif %}
+			{% if state == 1 %}
+				{% block select_group %}{% endblock %}
+			{% endif %}
+			{% if state == 2%}
+				{% block generate_message %}{% endblock %}
+			{% endif %}
+		</div>
+	</div>
+	<div class="navbar navbar-fixed-bottom">
+		<div class="container">
+			<p class="muted">
+				<a href="https://github.com/abhijit-murthy">Abhijit Murthy</a>
+			</p>
+		</div>
+	</div>
 	</body>
 </html>

@@ -13,6 +13,13 @@ function get_groups(token){
 	});
 }
 function generate_message(token,gid){
+	$(document).ajaxStart(function(){
+		$('.message_load').show();
+	});
+	$(document).ajaxStop(function(){
+		$('.message_load').hide();
+		$('.message').show();
+	})
 	$.getJSON('/generate_message',{
 		access_token:token,
 		groupid: gid

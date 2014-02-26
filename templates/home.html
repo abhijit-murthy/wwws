@@ -22,10 +22,16 @@
 	<center>
 		<h1>Welcome to What Would We Say!</h1>
 		<h2>Here's what someone in your group would say!</h2>
-		<div class="message">
+		<div class="message_container">
 			<script type="text/javascript" >
 			window.onload = generate_message('{{ access_token }}','{{ groupid }}');
+
 			</script>
+			<div class="message_load">
+				<img src="/static/img/ajax-loader.gif" alt="Could not load loading image!"> 
+			</div>
+			<div class="message" style="display:none">
+			</div>
 		</div>
 	</center>
 {% endblock %}
