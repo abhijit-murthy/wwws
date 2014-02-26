@@ -38,7 +38,6 @@ class GroupMeUser(object):
 			return None
 
 		serverResponse = r.json()
-
 		serverResponse = serverResponse["response"]
 		messages = serverResponse["messages"]
 		ret = []

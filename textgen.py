@@ -1,5 +1,6 @@
 import string
 import random
+from math import ceil
 from groupMe import *
 import time
 
@@ -66,7 +67,7 @@ class MarkovTextGen(object):
 	def genSentence(self):
 		sent = ''
 		current = ''
-		for i in range(10):
+		for i in range(random.randint(5,15)):
 			if current in self.matrix:
 				current = self.getNextWord(current)
 			else:

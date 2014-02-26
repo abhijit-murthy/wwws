@@ -18,3 +18,14 @@
 	</center>
 </div>
 {% endblock %}
+{% block generate_message %}
+	<center>
+		<h1>Welcome to What Would We Say!</h1>
+		<h2>Here's what someone in your group would say!</h2>
+		<div class="message">
+			<script type="text/javascript" >
+			window.onload = generate_message('{{ access_token }}','{{ groupid }}');
+			</script>
+		</div>
+	</center>
+{% endblock %}
